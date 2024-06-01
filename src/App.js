@@ -17,6 +17,11 @@ import PopupLogout from './components/PopupLogout';
 import PopupForm from './components/PopupForm';
 import PopupDonasi from './components/PopupDonasi';
 import PopupKontak from './components/PopupKontak';
+import StatistikCard from './components/StatistikCard';
+import FeatureCard from './components/FeatureCard';
+import PerhatianAdopsi from './components/PerhatianAdopsi';
+import PerhatianDonasi from './components/PerhatianDonasi';
+import PerhatianKontak from './components/PerhatianKontak';
 
 const App = () => {
     return (
@@ -40,6 +45,11 @@ const App = () => {
                 <Route path="/popupkontak" element={<PopupKontak />} />
                 <Route path="/kucinglogin" element={<KucingLogin />} />
                 <Route path="/anjinglogin" element={<AnjingLogin />} />
+                <Route path="/statistikcard" element={<StatistikCard />} />
+                <Route path="/featurecard" element={<FeatureCard />} />
+                <Route path="/perhatianadopsi" element={<PerhatianAdopsi />} />
+                <Route path="/perhatiandonasi" element={<PerhatianDonasi />} />
+                <Route path="/perhatiankontak" element={<PerhatianKontak />} />
             </Routes>
         </Router>
     );

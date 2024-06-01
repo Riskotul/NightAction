@@ -22,28 +22,50 @@ const cats = [
 ];
 
 const KucingLogin = () => {
+    // Bagi array kucing menjadi dua bagian: atas dan bawah
+    const topCats = cats.slice(0, 3);
+    const bottomCats = cats.slice(3);
+
     return (
        <div>
             <NavbarLogin />
-            <div className="bg-[#8DD67A] py-12 px-16 flex justify-between items-center mt-20">
-                <div className="flex-1 flex flex-col items-start">
-                    <h1 className="text-5xl font-bold mb-5">Hallo pecinta kucing</h1>
-                    <p className="text-xl">
+             <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center mt-20">
+                <div className="flex-1 flex flex-col items-center lg:items-start">
+                    <h1 className="text-3xl lg:text-5xl font-bold mb-5 text-center lg:text-left">Hallo pecinta kucing</h1>
+                    <p className="text-lg lg:text-xl text-center lg:text-left">
                         “Temukan sahabat kucing impianmu di<br /> sini. Kami menyediakan kucing yang <br />siap untuk diadopsi. Ayo, selamatkan <br />dan rawat kucing ini bersama kami!”
                     </p>
                 </div>
-                <img src={HeaderAdopsikucing} alt="Deskripsi gambar" className="w-[774px] h-[478px]" />
+                <img src={HeaderAdopsikucing} alt="Deskripsi gambar" className="w-full lg:w-auto h-auto" style={{ maxWidth: '600px' }} />
             </div>
 
             <div className="mt-10">
-                <h1 className="text-center text-4xl font-bold mb-20 mt-20">Temukan Teman Terbaik Kamu</h1>
-                <div className="flex flex-wrap justify-center gap-20 mx-20">  
-                    {cats.map((cat, index) => (
-                        <div key={index} className="bg-white rounded-lg shadow-md m-3 w-80 h-96 transform hover:scale-105 transition-transform flex flex-col justify-between mt-20">
-                            <img src={cat.image} alt={cat.name} className="w-[320px] h-[250px] object-cover " />
-                            <div className="bg-[#8DD67A] p-4 flex flex-col items-center text-center shadow-xl">
-                                <h2 className="text-xl font-bold mb-2">{cat.name}</h2>
-                                <p className="mb-2">{cat.age}, {cat.breed}</p>
+                <h1 className="text-center text-3xl lg:text-4xl font-bold mb-20 mt-20">Temukan Teman Terbaik Kamu</h1>
+                {/* Grid untuk tiga kucing di atas */}
+                <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10">  
+                    {topCats.map((cat, index) => (
+                        <div key={index} className="bg-white rounded-lg shadow-md w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between">
+                            <div className="flex justify-center lg:justify-start">
+                                <img src={cat.image} alt={cat.name} className="w-full h-56 lg:h-48 object-cover rounded-t-lg" />
+                            </div>
+                            <div className="bg-[#8DD67A] p-4 flex flex-col items-center text-center lg:text-left">
+                                <h2 className="text-lg lg:text-xl font-bold mb-2">{cat.name}</h2>
+                                <p className="text-sm lg:text-base mb-2">{cat.age}, {cat.breed}</p>
+                                <button className="bg-[#FA9F42] text-white py-2 px-4 rounded-lg shadow-xl">Adopt</button>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                {/* Grid untuk tiga kucing di bawah */}
+                <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 mt-6 lg:mt-10">  
+                    {bottomCats.map((cat, index) => (
+                        <div key={index} className="bg-white rounded-lg shadow-md w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between">
+                            <div className="flex justify-center lg:justify-start">
+                                <img src={cat.image} alt={cat.name} className="w-full h-56 lg:h-48 object-cover rounded-t-lg" />
+                            </div>
+                            <div className="bg-[#8DD67A] p-4 flex flex-col items-center text-center lg:text-left">
+                                <h2 className="text-lg lg:text-xl font-bold mb-2">{cat.name}</h2>
+                                <p className="text-sm lg:text-base mb-2">{cat.age}, {cat.breed}</p>
                                 <button className="bg-[#FA9F42] text-white py-2 px-4 rounded-lg shadow-xl">Adopt</button>
                             </div>
                         </div>
@@ -51,7 +73,7 @@ const KucingLogin = () => {
                 </div>
             </div>
 
-            <footer className="bg-[#8DD67A] text-black py-20 mt-20">
+            <footer className="bg-[#8DD67A] text-black py-12 md:py-20 mt-20">
                 <div className="container mx-auto flex flex-wrap justify-around">
                     <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
                         <div className="footer-logo">
@@ -65,11 +87,11 @@ const KucingLogin = () => {
                             <ul>
                                 <li className="flex items-center mb-2">
                                     <img src={footerKaki} alt="Penyediaan Pangan" className="mr-2 w-[37px] h-[37px]" />
-                                    Penyelamatan Hewan
+                                    <span className="text-sm">Penyelamatan Hewan</span>
                                 </li>
                                 <li className="flex items-center mb-2">
                                     <img src={footerKaki} alt="Adopsi Hewan" className="mr-2 w-[37px] h-[37px]" />
-                                    Adopsi Hewan
+                                    <span className="text-sm">Adopsi Hewan</span>
                                 </li>
                             </ul>
                         </div>
@@ -80,11 +102,11 @@ const KucingLogin = () => {
                             <ul>
                                 <li className="flex items-center mb-2">
                                     <img src={footerGmaps} alt="Nama" className="mr-2 w-[37px] h-[37px]" />
-                                    Pulau Jawa
+                                    <span className="text-sm">Pulau Jawa</span>
                                 </li>
                                 <li className="flex items-center mb-2">
                                     <img src={footerTelepon} alt="Phone" className="mr-2 w-[37px] h-[37px]" />
-                                    0823494510
+                                    <span className="text-sm">0823494510</span>
                                 </li>
                             </ul>
                         </div>

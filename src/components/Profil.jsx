@@ -6,8 +6,6 @@ import footerKaki from '../assets/footer_kaki.png';
 import footerGmaps from '../assets/footer_gmaps.png';
 import footerTelepon from '../assets/footer_telepon.png';
 import { NavbarLogin } from './Navbar';
-import HomeLogin from './HomeLogin';
-
 
 const Profil = () => {
   const [profileImage, setProfilImage] = useState(profilePicture);
@@ -26,8 +24,8 @@ const Profil = () => {
   return (
     <div>
       <NavbarLogin />
-      <div className="bg-white rounded-lg shadow-lg p-8 mt-60 max-w-7xl w-full mx-auto">
-        <div className="flex items-center border border-black rounded-lg p-4 mb-8 relative gap-12">
+      <div className="bg-white rounded-lg shadow-lg p-8 mt-20 md:mt-40 max-w-7xl w-full mx-auto">
+        <div className="flex items-center border border-black rounded-lg p-4 mb-20 relative gap-12">
           <input
             type="file"
             id="profile-picture-input"
@@ -89,8 +87,8 @@ const Profil = () => {
         <button type="button" className="bg-red-600 text-white py-2 px-4 rounded-xl col-span-1 md:col-span-2 justify-self-center mt-10">
           <Link to="/popuplogout">Keluar</Link> 
         </button>      
-        </div>
-      <footer className="bg-[#8DD67A] text-black py-20 mt-80">
+      </div>
+      <footer className="bg-[#8DD67A] text-black py-12 md:py-20">
                 <div className="container mx-auto flex flex-wrap justify-around">
                     <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
                         <div className="footer-logo">
@@ -98,51 +96,51 @@ const Profil = () => {
                             <p className="text-sm">“Bersama Heywani, mari selamatkan dan adopsi hewan yang membutuhkan. Setiap tindakan kita memberi harapan baru bagi mereka.”</p>
                         </div>
                     </div>
-                <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
-                    <div className="footer-services">
-                        <h3 className="text-xl mb-4">Kami Melayani</h3>
-                        <ul>
-                            <li className="flex items-center mb-2">
-                                <img src={footerKaki} alt="Penyediaan Pangan" className="mr-2 w-[37px] h-[37px]" />
-                                Penyelamatan Hewan
-                            </li>
-                            <li className="flex items-center mb-2">
-                                <img src={footerKaki} alt="Adopsi Hewan" className="mr-2 w-[37px] h-[37px]" />
-                                Adopsi Hewan
-                            </li>
-                        </ul>
+                    <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
+                        <div className="footer-services">
+                            <h3 className="text-xl mb-4">Kami Melayani</h3>
+                            <ul>
+                                <li className="flex items-center mb-2">
+                                    <img src={footerKaki} alt="Penyediaan Pangan" className="mr-2 w-[37px] h-[37px]" />
+                                    <span className="text-sm">Penyelamatan Hewan</span>
+                                </li>
+                                <li className="flex items-center mb-2">
+                                    <img src={footerKaki} alt="Adopsi Hewan" className="mr-2 w-[37px] h-[37px]" />
+                                    <span className="text-sm">Adopsi Hewan</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
-                    <div className="footer-contact">
-                        <h3 className="text-xl mb-4">Hubungi Kami</h3>
-                        <ul>
-                            <li className="flex items-center mb-2">
-                                <img src={footerGmaps} alt="Nama" className="mr-2 w-[37px] h-[37px]" />
-                                Pulau Jawa
-                            </li>
-                            <li className="flex items-center mb-2">
-                                <img src={footerTelepon} alt="Phone" className="mr-2 w-[37px] h-[37px]" />
-                                0823494510
-                            </li>
-                        </ul>
+                    <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
+                        <div className="footer-contact">
+                            <h3 className="text-xl mb-4">Hubungi Kami</h3>
+                            <ul>
+                                <li className="flex items-center mb-2">
+                                    <img src={footerGmaps} alt="Nama" className="mr-2 w-[37px] h-[37px]" />
+                                    <span className="text-sm">Pulau Jawa</span>
+                                </li>
+                                <li className="flex items-center mb-2">
+                                    <img src={footerTelepon} alt="Phone" className="mr-2 w-[37px] h-[37px]" />
+                                    <span className="text-sm">0823494510</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-                <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
-                    <div className="footer-follow">
-                        <h3 className="text-xl mb-4">Follow Us</h3>
-                    <ul className="flex">
-                        <li className="mr-4 w-[24px] h-[24px]"><a href="#"><i className='bx bxl-instagram text-xl text-white'></i></a></li>
-                        <li className="mr-4 w-[24px] h-[24px]"><a href="#"><i className='bx bxl-twitter text-xl text-white'></i></a></li>
-                        <li className="mr-4 w-[24px] h-[24px]"><a href="#"><i className='bx bxl-tiktok text-xl text-white'></i></a></li>
-                    </ul>
+                    <div className="w-full sm:w-1/2 lg:w-1/4 mb-8 px-4">
+                        <div className="footer-follow">
+                            <h3 className="text-xl mb-4">Follow Us</h3>
+                            <ul className="flex">
+                                <li className="mr-4 w-[24px] h-[24px]"><a href="#"><i className='bx bxl-instagram text-xl text-white'></i></a></li>
+                                <li className="mr-4 w-[24px] h-[24px]"><a href="#"><i className='bx bxl-twitter text-xl text-white'></i></a></li>
+                                <li className="mr-4 w-[24px] h-[24px]"><a href="#"><i className='bx bxl-tiktok text-xl text-white'></i></a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
                 </div>
                 <div className="bg-[#8DD67A] text-black text-center py-4">
                     Copyright 2024 © Heywani. All rights Reserved.
                 </div>
-        </footer>
+            </footer>
     </div>
   );
 };
