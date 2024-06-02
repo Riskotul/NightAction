@@ -47,7 +47,7 @@ const EditProfil = () => {
         <div className="border border-black rounded-lg p-8 relative gap-12">
           <h3 className="text-xl font-semibold mb-6">Informasi Pribadi</h3>
           <button className="bg-[#FA9F42] text-white py-2 px-4 rounded-lg absolute top-4 right-4">
-            <Link to='/profil'>Edit</Link>
+            <Link to='/profil'>Simpan</Link>
           </button>
           <form className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-10">
             <div className="form-group flex flex-col">

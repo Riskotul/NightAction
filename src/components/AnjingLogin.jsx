@@ -29,9 +29,9 @@ const dogs = [
          <div>
                <div className="bg-[#8DD67A] py-12 px-8 lg:px-16 flex flex-col lg:flex-row justify-between items-center mt-20">
                   <div className="flex-1 flex flex-col items-center lg:items-start">
-                      <h1 className="text-3xl lg:text-5xl font-bold mb-5 text-center lg:text-left">Hallo pecinta kucing</h1>
+                      <h1 className="text-3xl lg:text-5xl font-bold mb-5 text-center lg:text-left">Hallo pecinta Anjing</h1>
                       <p className="text-lg lg:text-xl text-center lg:text-left">
-                          “Temukan sahabat kucing impianmu di<br /> sini. Kami menyediakan kucing yang <br />siap untuk diadopsi. Ayo, selamatkan <br />dan rawat kucing ini bersama kami!”
+                          “Temukan sahabat Anjing impianmu di<br /> sini. Kami menyediakan anjing yang <br />siap untuk diadopsi. Ayo, selamatkan <br />dan rawat anjing ini bersama kami!”
                       </p>
                   </div>
                   <img src={HeaderAdopsianjing} alt="Deskripsi gambar" className="w-full lg:w-auto h-auto" style={{ maxWidth: '600px' }} />
