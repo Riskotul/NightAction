@@ -36,12 +36,12 @@ const Beranda = () => {
             </div>
 
             <div className="bg-white py-5 text-center mt-20">
-                <div className="bg-[#FA9F42] text-black text-xl md:text-3xl py-4 px-8 rounded-2xl inline-block mx-auto font-bold w-full md:w-[1195px] h-[94px] leading-[94px] font-poppins">
+                <div className="bg-[#FA9F42] text-black text-xl md:text-3xl py-4 px-8 rounded-2xl inline-block mx-auto font-bold w-full md:max-w-[1195px] h-[94px] leading-[94px] font-poppins">
                     Terima Kasih Telah Mempercayai Kami
                 </div>
             </div>
 
-            <div className="flex flex-col md:flex-row justify-center items-center ">
+            <div className="flex flex-col md:flex-row justify-center items-center mx-auto px-5 md:px-0">
                 <StatistikCard 
                     animalRescueImage={animalRescueImage} 
                     rescuersListedImage={rescuersListedImage} 
