@@ -39,7 +39,6 @@ const dogs = [
   
               <div className="mt-10">
                   <h1 className="text-center text-3xl lg:text-4xl font-bold mb-20 mt-20">Temukan Teman Terbaik Kamu</h1>
-                  {/* Grid untuk tiga anjing di atas */}
                   <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 shadow-xl">  
                       {topDogs.map((dog, index) => (
                           <div key={index} className="bg-white rounded-lg shadow-md w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between">
@@ -54,7 +53,6 @@ const dogs = [
                           </div>
                       ))}
                   </div>
-                  {/* Grid untuk tiga anjing di bawah */}
                   <div className="max-w-screen-lg mx-auto grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-10 mt-6 lg:mt-10 shadow-xl">  
                       {bottomDogs.map((dog, index) => (
                           <div key={index} className="bg-white rounded-lg shadow-md w-full h-auto transform hover:scale-105 transition-transform flex flex-col justify-between">
